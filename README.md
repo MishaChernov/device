@@ -1,1 +1,0 @@
-mishachernov.github.io/device
