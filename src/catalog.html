@@ -89,7 +89,7 @@
 				c1.658,0,3.342-1.299,3.767-2.9l6.996-28.498C47.893,16.065,47.553,15.631,47,15.631z"/>
     </symbol>
   </svg>
-  <header class="header">
+  <header class="page-header">
     <a class="logo" href="index.html">
       <h1 class="logo__title">Device</h1>
     </a>
@@ -97,36 +97,35 @@
     <div class="user-panel">
       <form class="search" action="/" method="get">
         <button class="search__btn" type="submit" value="Поиск">
-          <svg class="search__img" width="16" height="17">
+          <svg class="search__icon" width="16" height="17">
             <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-search"></use>
           </svg>
-          Найти
-        </button>
-        <input class="search__input" type="text" name="search" placeholder="Поиск по сайту">
+          <input class="search__input" type="text" name="search" placeholder="Поиск по сайту">
+          <button class="search__btn" type="submit" value="Найти">Найти</button>
       </form>
 
-      <a class="user-panel__item  user-panel--login" href="#">
-        <svg class="user-panel__img" width="13" height="12">
+      <a class="user-panel__link  user-panel__link--login" href="#">
+        <svg class="user-panel__icon" width="13" height="12">
           <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-user"></use>
         </svg>
         Войти
       </a>
       <div class="user-panel__connect  user-panel__connect--active">
-        <a class="user-panel__item  user-panel--login" href="#">
-          <svg class="user-panel__img" width="13" height="12">
+        <a class="user-panel__link  user-panel__link--login" href="#">
+          <svg class="user-panel__icon" width="13" height="12">
             <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-user"></use>
           </svg>
           Михаил Сергеевич
         </a>
-        <a class="user-panel__output" href="#">Выйти</a>
+        <a class="user-panel__output-btn" href="#">Выйти</a>
       </div>
-      <a class="user-panel__item  user-panel--compare" href="#">
-        <svg class="user-panel__img" width="10" height="10">
+      <a class="user-panel__link  user-panel__link--compare" href="#">
+        <svg class="user-panel__icon" width="10" height="10">
           <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-compare"></use>
         </svg>
         Сравнить
       </a>
-      <a class="user-panel__item  user-panel--basket" href="#">
+      <a class="user-panel__link  user-panel__link--basket" href="#">
         <svg class="user-panel__img" width="12" height="12">
           <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-basket"></use>
         </svg>
@@ -134,33 +133,33 @@
       </a>
     </div>
 
-    <div class="header__wrapper">
-      <div class="catalog-menu">
-        <a class="catalog-menu__btn" href="#">Каталог товаров</a>
+    <nav class="main-menu">
+      <div class="main-menu__catalog">
+        <a class="main-menu__link  main-menu__link--catalog" href="#">Каталог товаров</a>
 
-        <ul class="catalog-menu__list">
-          <li class="catalog-menu__item">
-            <a class="catalog-menu__link" href="#">Виртуальная реальность</a>
+        <ul class="main-menu__inner-list">
+          <li class="main-menu__inner-item">
+            <a class="main-menu__inner-link" href="#">Виртуальная реальность</a>
           </li>
-          <li class="catalog-menu__item">
-            <a class="catalog-menu__link" href="#">Моноподы для селфи</a>
+          <li class="main-menu__inner-item">
+            <a class="main-menu__inner-link">Моноподы для селфи</a>
           </li>
-          <li class="catalog-menu__item">
-            <a class="catalog-menu__link" href="#">Экшн-камеры</a>
+          <li class="main-menu__inner-item">
+            <a class="main-menu__inner-link" href="#">Экшн-камеры</a>
           </li>
-          <li class="catalog-menu__item">
-            <a class="catalog-menu__link" href="#">Фитнес браслеты</a>
+          <li class="main-menu__inner-item">
+            <a class="main-menu__inner-link" href="#">Фитнес браслеты</a>
           </li>
-          <li class="catalog-menu__item">
-            <a class="catalog-menu__link" href="#">Умные часы</a>
+          <li class="main-menu__inner-item">
+            <a class="main-menu__inner-link" href="#">Умные часы</a>
           </li>
-          <li class="catalog-menu__item">
-            <a class="catalog-menu__link" href="#">Квадрокоптеры</a>
+          <li class="main-menu__inner-item">
+            <a class="main-menu__inner-link" href="#">Квадрокоптеры</a>
           </li>
         </ul>
       </div>
 
-      <ul class="main-menu">
+      <ul class="main-menu__list">
         <li class="main-menu__item">
           <a class="main-menu__link" href="#">Доставка</a>
         </li>
@@ -171,15 +170,15 @@
           <a class="main-menu__link" href="#">Контакты</a>
         </li>
       </ul>
-    </div>
+    </nav>
   </header>
 
-  <main class="main">
-    <h2 class="main__title">Моноподы для селфи</h2>
+  <main class="page-main">
+    <h2 class="page-main__title">Моноподы для селфи</h2>
 
     <ul class="breadcrumbs">
       <li class="breadcrumbs__item">
-        <a class="breadcrumbs__link" href="#">Главная</a>
+        <a class="breadcrumbs__link" href="index.html">Главная</a>
       </li>
       <li class="breadcrumbs__item">
         <a class="breadcrumbs__link" href="#">Каталог товаров</a>
@@ -245,10 +244,12 @@
 
     <section class="products">
       <div class="sort">
-        <h3 class="sort__subtitle">Сортировать:</h3>
-        <a class="sort__link" href="#">По цене</a>
-        <a class="sort__link" href="#">По типу</a>
-        <a class="sort__link" href="#">По популярности</a>
+        <h3 class="sort__title">Сортировать:</h3>
+        <ul class="sort__list">
+          <li class="sort__item">По цене</li>
+          <li class="sort__item">По типу</li>
+          <li class="sort__item">По популярности</li>
+        </ul>
       </div>
 
       <figure class="products__item">
@@ -290,26 +291,26 @@
     </section>
   </main>
 
-  <footer class="footer">
+  <footer class="page-footer">
     <div class="footer__wrapper">
       <a class="logo" href="index.html">
         <h1 class="logo__title">Device</h1>
       </a>
 
       <div class="user-panel">
-        <a class="user-panel__item  user-panel--login" href="/">
+        <a class="user-panel__link  user-panel__link--login" href="#">
           <svg class="user-panel__img" width="13" height="12">
             <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-user"></use>
           </svg>
           Войти
         </a>
-        <a class="user-panel__item  user-panel--compare" href="/">
+        <a class="user-panel__link  user-panel__link--compare" href="#">
           <svg class="user-panel__img" width="10" height="10">
             <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-compare"></use>
           </svg>
           Сравнить
         </a>
-        <a class="user-panel__item  user-panel--basket" href="/">
+        <a class="user-panel__link  user-panel__link--basket" href="#">
           <svg class="user-panel__img" width="12" height="12">
             <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-basket"></use>
           </svg>
@@ -319,15 +320,15 @@
     </div>
     <div class="footer__wrapper">
       <a class="footer__address" href="https://www.google.com.ua/maps/place/%D0%B2%D1%83%D0%BB%D0%B8%D1%86%D1%8F+%D0%91%D1%83%D0%B4%D1%96%D0%B2%D0%B5%D0%BB%D1%8C%D0%BD%D0%B8%D0%BA%D1%96%D0%B2,+15,+%D0%9A%D0%B8%D1%97%D0%B2/@50.44656,30.6172205,17z/data=!4m5!3m4!1s0x40d4c558fe7b4d41:0x168024cc6745f48a!8m2!3d50.445995!4d30.616772">г. Москва, ул. Строителей, 15</a>
-      <ul class="menu">
-        <li class="menu__item">
-          <a class="menu__link" href="#">Доставка</a>
+      <ul class="main-menu  main-menu--footer">
+        <li class="main-menu__item">
+          <a class="main-menu__link" href="#">Доставка</a>
         </li>
         <li class="main-menu__item">
-          <a class="menu__link" href="#">Гарантия</a>
+          <a class="main-menu__link" href="#">Гарантия</a>
         </li>
-        <li class="menu__item">
-          <a class="menu__link" href="#">Контакты</a>
+        <li class="main-menu__item">
+          <a class="main-menu__link" href="#">Контакты</a>
         </li>
       </ul>
       <a class="footer__tel" href="tel:+7495-95-95">Тел.: +7 (495) 495-95-95</a>
@@ -336,55 +337,30 @@
       <div class="social-icons">
 				<a class="social-link  social-link--fb" href="#">
           Faceboock
-          <svg class="social-link__img" width="12" height="22">
+          <svg class="social-link__icon" width="12" height="22">
             <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-faceboock"></use>
           </svg>
         </a>
         <a class="social-link  social-link--inst" href="#">
           Instagram
-          <svg class="social-link__img" width="22" height="22">
+          <svg class="social-link__icon" width="22" height="22">
             <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-instagram"></use>
           </svg>
         </a>
 				<a class="social-link  social-link--tw" href="#">
           Twitter
-          <svg class="social-link__img" width="22" height="18">
+          <svg class="social-link__icon" width="22" height="18">
             <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-twitter"></use>
           </svg>
         </a>
 			</div>
 
       <a class="footer__copyright" href="https://htmlacademy.ru/">
-        <svg class="social-link__img" width="27" height="34">
+        <svg class="social-link__icon" width="27" height="34">
           <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-htmlacademy"></use>
         </svg>
       </a>
     </div>
   </footer>
-
-  <form class="write-us" action="/" method="post">
-    <label class="write-us__label  write-us__label--name">
-      Ваше имя:
-      <input class="write-us__input" type="text" name="name" placeholder="Представьтесь, пожалуйста" autofocus required>
-    </label>
-
-    <label class="write-us__label  write-us__label--email">
-      Ваш e-mail:
-      <input class="write-us__input" type="email" name="email" placeholder="Для отправки ответа" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required>
-    </label>
-
-    <label class="write-us__label  write-us__label--message">
-      Текст письма:
-      <textarea class="write-us__textarea" name="message" placeholder="В свободной форме" required></textarea>
-    </label>
-
-    <input class="write-us__btn  btn" type="submit" value="Отправить">
-    <button class="write-us__btn-close  btn-close" type="button">Закрыть</button>
-  </form>
-
-  <div class="popup-map">
-    <iframe class="popup-map__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2540.7372300585325!2d30.6145833157313!3d50.44599497947476!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4c558fe7b4d41%3A0x168024cc6745f48a!2z0LLRg9C70LjRhtGPINCR0YPQtNGW0LLQtdC70YzQvdC40LrRltCyLCAxNSwg0JrQuNGX0LI!5e0!3m2!1sru!2sua!4v1495734011396" width="960" height="560" frameborder="0" style="border:0" allowfullscreen></iframe>
-    <button class="popup-map__btn-close  btn-close" type="button">Закрыть</button>
-  </div>
 </body>
 </html>
