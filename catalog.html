@@ -89,7 +89,7 @@
 				c1.658,0,3.342-1.299,3.767-2.9l6.996-28.498C47.893,16.065,47.553,15.631,47,15.631z"/>
     </symbol>
   </svg>
-  <header class="header">
+  <header class="page-header">
     <a class="logo" href="index.html">
       <h1 class="logo__title">Device</h1>
     </a>
@@ -100,9 +100,8 @@
           <svg class="search__img" width="16" height="17">
             <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-search"></use>
           </svg>
-          Найти
-        </button>
-        <input class="search__input" type="text" name="search" placeholder="Поиск по сайту">
+          <input class="search__input" type="text" name="search" placeholder="Поиск по сайту">
+          <button class="search__btn" type="submit" value="Найти"></button>
       </form>
 
       <a class="user-panel__item  user-panel--login" href="#">
@@ -134,33 +133,31 @@
       </a>
     </div>
 
-    <div class="header__wrapper">
-      <div class="catalog-menu">
-        <a class="catalog-menu__btn" href="#">Каталог товаров</a>
+    <nav class="main-menu">
+      <a class="main-menu__link  main-menu__link--catalog" href="#">Каталог товаров</a>
 
-        <ul class="catalog-menu__list">
-          <li class="catalog-menu__item">
-            <a class="catalog-menu__link" href="#">Виртуальная реальность</a>
-          </li>
-          <li class="catalog-menu__item">
-            <a class="catalog-menu__link" href="#">Моноподы для селфи</a>
-          </li>
-          <li class="catalog-menu__item">
-            <a class="catalog-menu__link" href="#">Экшн-камеры</a>
-          </li>
-          <li class="catalog-menu__item">
-            <a class="catalog-menu__link" href="#">Фитнес браслеты</a>
-          </li>
-          <li class="catalog-menu__item">
-            <a class="catalog-menu__link" href="#">Умные часы</a>
-          </li>
-          <li class="catalog-menu__item">
-            <a class="catalog-menu__link" href="#">Квадрокоптеры</a>
-          </li>
-        </ul>
-      </div>
+      <ul class="main-menu__list  main-menu__list--catalog">
+        <li class="main-menu__item">
+          <a class="main-menu__link" href="#">Виртуальная реальность</a>
+        </li>
+        <li class="main-menu__item">
+          <a class="main-menu__link" href="catalog.html">Моноподы для селфи</a>
+        </li>
+        <li class="main-menu__item">
+          <a class="main-menu__link" href="#">Экшн-камеры</a>
+        </li>
+        <li class="main-menu__item">
+          <a class="main-menu__link" href="#">Фитнес браслеты</a>
+        </li>
+        <li class="main-menu__item">
+          <a class="main-menu__link" href="#">Умные часы</a>
+        </li>
+        <li class="main-menu__item">
+          <a class="main-menu__link" href="#">Квадрокоптеры</a>
+        </li>
+      </ul>
 
-      <ul class="main-menu">
+      <ul class="main-menu__list">
         <li class="main-menu__item">
           <a class="main-menu__link" href="#">Доставка</a>
         </li>
@@ -171,10 +168,10 @@
           <a class="main-menu__link" href="#">Контакты</a>
         </li>
       </ul>
-    </div>
+    </nav>
   </header>
 
-  <main class="main">
+  <main class="page-main">
     <h2 class="main__title">Моноподы для селфи</h2>
 
     <ul class="breadcrumbs">
@@ -290,7 +287,7 @@
     </section>
   </main>
 
-  <footer class="footer">
+  <footer class="page-footer">
     <div class="footer__wrapper">
       <a class="logo" href="index.html">
         <h1 class="logo__title">Device</h1>
@@ -319,15 +316,15 @@
     </div>
     <div class="footer__wrapper">
       <a class="footer__address" href="https://www.google.com.ua/maps/place/%D0%B2%D1%83%D0%BB%D0%B8%D1%86%D1%8F+%D0%91%D1%83%D0%B4%D1%96%D0%B2%D0%B5%D0%BB%D1%8C%D0%BD%D0%B8%D0%BA%D1%96%D0%B2,+15,+%D0%9A%D0%B8%D1%97%D0%B2/@50.44656,30.6172205,17z/data=!4m5!3m4!1s0x40d4c558fe7b4d41:0x168024cc6745f48a!8m2!3d50.445995!4d30.616772">г. Москва, ул. Строителей, 15</a>
-      <ul class="menu">
-        <li class="menu__item">
-          <a class="menu__link" href="#">Доставка</a>
+      <ul class="main-menu  main-menu__list  main-menu--footer">
+        <li class="main-menu__item">
+          <a class="main-menu__link" href="#">Доставка</a>
         </li>
         <li class="main-menu__item">
-          <a class="menu__link" href="#">Гарантия</a>
+          <a class="main-menu__link" href="#">Гарантия</a>
         </li>
-        <li class="menu__item">
-          <a class="menu__link" href="#">Контакты</a>
+        <li class="main-menu__item">
+          <a class="main-menu__link" href="#">Контакты</a>
         </li>
       </ul>
       <a class="footer__tel" href="tel:+7495-95-95">Тел.: +7 (495) 495-95-95</a>
