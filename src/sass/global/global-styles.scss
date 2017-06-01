@@ -1,0 +1,14 @@
+body {
+  max-width: $desktop-width;
+
+  @include primary-font;
+}
+
+.global-wrapper {
+  margin: 0 auto;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}

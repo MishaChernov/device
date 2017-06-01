@@ -1,0 +1,13 @@
+.table__head {
+  font-family: $secondary-font-family;
+  font-size: 36px;
+}
+
+.table__col {
+  padding-right: 61px;
+  padding-bottom: 8px;
+
+  &:last-child {
+    padding-right: 0;
+  }
+}

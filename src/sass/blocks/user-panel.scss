@@ -1,0 +1,44 @@
+.user-panel {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  flex-basis: 1200px;
+}
+
+.user-panel__search {
+  position: relative;
+
+  margin-right: auto;
+  margin-bottom: 20px;
+}
+
+.user-panel__link {
+  position: relative;
+  padding-left: 20px;
+  margin-left: 20px;
+  margin-right: 2%;
+
+  @include primary-font;
+  text-align: right;
+  text-decoration: none;
+
+  &--login {
+    margin-right: 19%;
+  }
+  &:last-child {
+    margin-right: 0;
+  }
+  @include hover-opacity;
+  @include active-opacity;
+}
+
+.user-panel__icon {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+
+  @include hover-opacity;
+  @include active-opacity;
+}

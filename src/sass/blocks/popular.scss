@@ -1,0 +1,89 @@
+.popular {
+  display: flex;
+  flex-wrap: wrap;
+  flex-basis: 1040px;
+  align-items: baseline;
+  justify-content: space-between;
+}
+
+.popular__link {
+  position: relative;
+  display: block;
+  width: 160px;
+  padding-top: 160px;
+
+  text-decoration: none;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 160px;
+    height: 160px;
+
+    background-color: $secondary-bg-color;
+    opacity: 0.5;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-image: url("../img/sprite-popular.png");
+    background-repeat: none;
+  }
+  &--virtual::after {
+    top: 52px;
+    width: 97px;
+    height: 55px;
+    background-position: -177px -15px;
+  }
+  &--monopod::after {
+    top: 43px;
+    width: 86px;
+    height: 117px;
+    background-position: -304px -15px;
+  }
+  &--camera::after {
+    top: 38px;
+    left: 85px;
+    width: 71px;
+    height: 87px;
+    background-position: -420px -15px;
+  }
+  &--band::after {
+    top: 50px;
+    width: 107px;
+    height: 65px;
+    background-position: -521px -15px;
+  }
+  &--watch::after {
+    top: 32px;
+    left: 83px;
+    width: 56px;
+    height: 98px;
+    background-position: -658px -15px;
+  }
+  &--drone::after {
+    top: 49px;
+    width: 132px;
+    height: 69px;
+    background-position: -15px -15px;
+  }
+  &:hover::before {
+    opacity: 1;
+  }
+  &:active::after {
+    opacity: 0.5;
+  }
+}
+
+.popular__title {
+  margin-top: 35px;
+  font-family: $secondary-font-family;
+  font-size: 18px;
+  line-height: 20px;
+  font-weight: 700;
+  color: $secondary-text-color;
+
+}

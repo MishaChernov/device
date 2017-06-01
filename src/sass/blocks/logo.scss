@@ -1,0 +1,12 @@
+.logo {
+  display: block;
+}
+
+.logo__title {
+  margin: 0;
+
+  font-family: $secondary-font-family;
+  font-size: 48px;
+  text-transform: uppercase;
+  color: $secondary-text-color;
+}

@@ -1,0 +1,19 @@
+@mixin primary-font {
+  font-family: $primary-font-family;
+  font-style: normal;
+  font-size: $primary-text-size;
+  line-height: $primary-text-height;
+  color: $primary-text-color;
+}
+
+@mixin hover-opacity {
+  &:hover {
+    opacity: 0.6;
+  }
+}
+
+@mixin active-opacity {
+  &:active {
+    opacity: 0.3;
+  }
+}

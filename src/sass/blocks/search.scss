@@ -1,0 +1,50 @@
+.search__icon {
+  position: absolute;
+  left: 4px;
+  top: 14px;
+}
+
+.search__input {
+  padding-left: 40px;
+  padding-right: 83px;
+  height: 40px;
+  width: 200px;
+
+  @include primary-font;
+  color: #000000;
+
+  border: none;
+  outline: none;
+  background: none;
+
+  &:focus {
+    box-shadow: 0 2px 0 #000000;
+  }
+}
+
+.search__btn {
+  position: absolute;
+  left: 240px;
+  bottom: -2px;
+
+  display: none;
+  width: 83px;
+  height: 44px;
+
+  border: 2px solid #000000;
+  outline: none;
+  background: none;
+  cursor: pointer;
+
+  &:hover {
+    color: #ffffff;
+    background-color: #000000;
+  }
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+  }
+}
+
+.search__input:focus ~ .search__btn {
+  display: block;
+}
