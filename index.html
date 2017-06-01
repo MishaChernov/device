@@ -4,8 +4,9 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Device: главная</title>
+  <link rel="stylesheet" href="css/style-min.css">
 </head>
-<body>
+<body class="global-wrapper">
   <svg style="display:none">
     <symbol viewBox="0 0 611.981 611.981" id="icon-twitter">
       <path d="M605.95,114.16c-4.909-3.356-11.387-3.245-16.144,0.319c-3.287,2.455-8.183,4.632-13.896,6.532
@@ -90,64 +91,44 @@
     </symbol>
   </svg>
   <header class="page-header">
-    <a class="logo">
+    <a class="logo  page-header__logo">
       <h1 class="logo__title">Device</h1>
     </a>
 
-    <div class="user-panel">
-      <form class="search" action="/" method="get">
-        <svg class="search__img" width="16" height="17">
+    <div class="user-panel  page-header__user-panel">
+      <form class="search  user-panel__search" action="/" method="get">
+        <svg class="search__icon" width="16" height="16">
           <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-search"></use>
         </svg>
         <input class="search__input" type="text" name="search" placeholder="Поиск по сайту">
-        <button class="search__btn" type="submit" value="Найти"></button>
+        <button class="search__btn" type="submit" name="Найти">Найти</button>
       </form>
 
-      <a class="user-panel__item  user-panel--login" href="#">
-        <svg class="user-panel__img" width="13" height="12">
+      <a class="user-panel__link  user-panel__link--login" href="#">
+        <svg class="user-panel__icon" width="13" height="12">
           <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-user"></use>
         </svg>
         Войти
       </a>
-      <a class="user-panel__item  user-panel--compare" href="#">
-        <svg class="user-panel__img" width="10" height="10">
+      <a class="user-panel__link  user-panel__link--compare" href="#">
+        <svg class="user-panel__icon" width="10" height="10">
           <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-compare"></use>
         </svg>
         Сравнить
       </a>
-      <a class="user-panel__item  user-panel--basket" href="#">
-        <svg class="user-panel__img" width="12" height="12">
+      <a class="user-panel__link  user-panel__link--basket" href="#">
+        <svg class="user-panel__icon" width="12" height="12">
           <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-basket"></use>
         </svg>
         Корзина
       </a>
     </div>
 
-    <nav class="main-menu">
-      <a class="main-menu__link  main-menu__link--catalog" href="#">Каталог товаров</a>
-
-      <ul class="main-menu__list  main-menu__list--catalog">
-        <li class="main-menu__item">
-          <a class="main-menu__link" href="#">Виртуальная реальность</a>
-        </li>
-        <li class="main-menu__item">
-          <a class="main-menu__link" href="catalog.html">Моноподы для селфи</a>
-        </li>
-        <li class="main-menu__item">
-          <a class="main-menu__link" href="#">Экшн-камеры</a>
-        </li>
-        <li class="main-menu__item">
-          <a class="main-menu__link" href="#">Фитнес браслеты</a>
-        </li>
-        <li class="main-menu__item">
-          <a class="main-menu__link" href="#">Умные часы</a>
-        </li>
-        <li class="main-menu__item">
-          <a class="main-menu__link" href="#">Квадрокоптеры</a>
-        </li>
-      </ul>
-
+    <nav class="main-menu  page-header__main-menu">
       <ul class="main-menu__list">
+        <li class="main-menu__item  main-menu__item--catalog">
+          <a class="main-menu__link  main-menu__link--catalog" href="#">Каталог товаров</a>
+        </li>
         <li class="main-menu__item">
           <a class="main-menu__link" href="#">Доставка</a>
         </li>
@@ -158,33 +139,51 @@
           <a class="main-menu__link" href="#">Контакты</a>
         </li>
       </ul>
+
+      <ul class="main-menu__inner-list">
+        <li class="main-menu__inner-item">
+          <a class="main-menu__inner-link" href="#">Виртуальная реальность</a>
+        </li>
+        <li class="main-menu__inner-item">
+          <a class="main-menu__inner-link" href="catalog.html">Фитнес браслеты</a>
+        </li>
+        <li class="main-menu__inner-item">
+          <a class="main-menu__inner-link" href="#">Квадрокоптеры</a>
+        </li>
+        <li class="main-menu__inner-item">
+          <a class="main-menu__inner-link" href="#">Моноподы для селфи</a>
+        </li>
+        <li class="main-menu__inner-item">
+          <a class="main-menu__inner-link" href="#">Умные часы</a>
+        </li>
+        <li class="main-menu__inner-item">
+          <a class="main-menu__inner-link" href="#">Экшн-камеры</a>
+        </li>
+      </ul>
     </nav>
   </header>
 
   <main class="page-main">
-    <div class="slider">
-      <input class="slider__toggle" type="radio" id="toggle-1" name="toggle" checked>
-      <input class="slider__toggle" type="radio" id="toggle-2" name="toggle">
-      <input class="slider__toggle" type="radio" id="toggle-3" name="toggle">
-      <div class="slider-controls">
-        <label class="slider-controls__label" for="toggle-1"></label>
-        <label class="slider-controls__label" for="toggle-2"></label>
-        <label class="slider-controls__label" for="toggle-3"></label>
-      </div>
+    <div class="slider  page-main__slider">
+      <input class="slider__radio" type="radio" id="toggle-1" name="toggle" checked>
+      <input class="slider__radio" type="radio" id="toggle-2" name="toggle">
+      <input class="slider__radio" type="radio" id="toggle-3" name="toggle">
 
-      <div class="slide  slide--one">
-        <img class="slide__img" src="img/slider-1.png" srcset="img/slider-1@2x.png" width="384" height="486" alt="Селфипалка">
+      <div class="slide  slider__slide  slide--one">
+        <img class="slide__img  slide__img--padding" src="img/slider-1.png" srcset="img/slider-1@2x.png" width="384" height="486" alt="Селфипалка">
         <div class="slide__description">
-          <h2 class="slide__name">Делай селфи как Бен Стиллер!</h2>
+          <h2 class="slide__title">Делай селфи, как Бен Стиллер!</h2>
           <p class="slide__text">Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.</p>
           <a class="slide__btn  btn" href="#">Подробнее</a>
 
-          <table class="table">
-            <tr class="table__row">
-              <td class="table__col">8.5 м</td>
-              <td class="table__col">5 кг</td>
-              <td class="table__col">Карбон</td>
-            </tr>
+          <table class="table  slide__table">
+            <thead class="table__head">
+              <tr class="table__row">
+                <td class="table__col">8.5 м</td>
+                <td class="table__col">5 кг</td>
+                <td class="table__col">Карбон</td>
+              </tr>
+            </thead>
             <tr class="table__row">
               <td class="table__col">Длина палки</td>
               <td class="table__col">Вес палки</td>
@@ -194,18 +193,20 @@
         </div>
       </div>
 
-      <div class="slide  slide--second">
+      <div class="slide  slider__slide  slide--second">
         <img class="slide__img" src="img/slider-2.png" srcset="img/slider-2@2x.png" width="345" height="485" alt="Фитнес браслет">
 
         <div class="slide__description">
-          <h2 class="slide__name">Худеем правильно!</h2>
+          <h2 class="slide__title">Худеем правильно!</h2>
           <p class="slide__text">Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать занятия и соблюдать диету.</p>
           <a class="slide__btn  btn" href="#">Подробнее</a>
 
-          <table class="table">
-            <tr class="table__row">
-              <td class="table__col">48 часов</td>
-            </tr>
+          <table class="table  slide__table">
+            <thead class="table__head">
+              <tr class="table__row">
+                <td class="table__col">48 часов</td>
+              </tr>
+            </thead>
             <tr class="table__row">
               <td class="table__col">Без подзарядки</td>
             </tr>
@@ -213,56 +214,64 @@
         </div>
       </div>
 
-      <div class="slide  slide--three">
+      <div class="slide  slider__slide  slide--three">
         <img class="slide__img" src="img/slider-3.png" srcset="img/slider-3@2x.png" width="526" height="334" alt="Квадрокоптер">
         <div class="slide__description">
-          <h2 class="slide__name">Порхает как бабочка, жалит как пчела!</h2>
+          <h2 class="slide__title  slide__title--padding">Порхает как бабочка, жалит как пчела!</h2>
           <p class="slide__text">Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.</p>
           <a class="slide__btn  btn" href="#">Подробнее</a>
 
-          <table class="table">
-            <tr class="table__row">
-              <td class="table__col">800 м</td>
-              <td class="table__col">50 м</td>
-            </tr>
+          <table class="table  slide__table">
+            <thead class="table__head">
+              <tr class="table__row">
+                <td class="table__col">800 м</td>
+                <td class="table__col">50 м</td>
+              </tr>
+            </thead>
             <tr class="table__row">
               <td class="table__col">Дальность полета</td>
-              <td class="table__col">РАдиус поражения</td>
+              <td class="table__col">Радиус поражения</td>
             </tr>
           </table>
         </div>
       </div>
+
+      <div class="slider__controls">
+        <label class="slider__toggle" for="toggle-1"></label>
+        <label class="slider__toggle" for="toggle-2"></label>
+        <label class="slider__toggle" for="toggle-3"></label>
+      </div>
     </div>
 
-    <div class="products">
-      <a class="products__link" href="#">
-        <h3 class="products__title">Виртуальная реальность</h3>
+    <div class="popular  page-main__popular">
+      <a class="popular__link  popular__link--virtual" href="#">
+        <h3 class="popular__title">Виртуальная реальность</h3>
       </a>
-      <a class="products__link" href="catalog.html">
-        <h3 class="products__title">Моноподы для селфи</h3>
+      <a class="popular__link  popular__link--monopod" href="catalog.html">
+        <h3 class="popular__title">Моноподы для селфи</h3>
       </a>
-      <a class="products__link" href="#">
-        <h3 class="products__title">Экшн-камеры</h3>
+      <a class="popular__link  popular__link--camera" href="#">
+        <h3 class="popular__title">Экшн-камеры</h3>
       </a>
-      <a class="products__link" href="#">
-        <h3 class="products__title">Фитнес браслеты</h3>
+      <a class="popular__link  popular__link--band" href="#">
+        <h3 class="popular__title">Фитнес браслеты</h3>
       </a>
-      <a class="products__link" href="#">
-        <h3 class="products__title">Умные часы</h3>
+      <a class="popular__link  popular__link--watch" href="#">
+        <h3 class="popular__title">Умные часы</h3>
       </a>
-      <a class="products__link" href="#">
-        <h3 class="products__title">Квадрокоптеры</h3>
+      <a class="popular__link  popular__link--drone" href="#">
+        <h3 class="popular__title">Квадрокоптеры</h3>
       </a>
     </div>
 
-    <section class="services">
-      <input class="services__toggle" type="radio" id="btn-1" name="toggle" checked>
-      <input class="services__toggle" type="radio" id="btn-2" name="toggle">
-      <input class="services__toggle" type="radio" id="btn-3" name="toggle">
-      <div class="services-controls">
-        <label class="services-controls__label" for="btn-1">Доставка</label>
-        <label class="services-controls__label" for="btn-2">Гарантия</label>
-        <label class="services-controls__label" for="btn-3">Кредит</label>
+    <section class="services  page-main__services">
+      <input class="services__radio" type="radio" id="btn-1" name="toggle" checked>
+      <input class="services__radio" type="radio" id="btn-2" name="toggle">
+      <input class="services__radio" type="radio" id="btn-3" name="toggle">
+      <div class="services__controls">
+        <label class="services__toggle" for="btn-1">Доставка</label>
+        <label class="services__toggle" for="btn-2">Гарантия</label>
+        <label class="services__toggle" for="btn-3">Кредит</label>
       </div>
 
       <div class="services__item  services__item--delivery">
@@ -287,14 +296,14 @@
       </div>
     </section>
 
-    <div class="brends">
+    <div class="brends  page-main__brends">
       <a class="brends__link" href="#">DJI</a>
       <a class="brends__link" href="#">Sp Gadjets</a>
       <a class="brends__link" href="#">GoPro</a>
       <a class="brends__link" href="#">Vive</a>
     </div>
 
-    <section class="about">
+    <section class="about  page-main__about">
       <h2 class="about__title">О нас</h2>
       <p class="about__text">Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.</p>
       <p class="about__text">Мы можем доставить ваш товар в самые отдаленные точки России! DEVICE работает со многими транспортными компаниями:</p>
@@ -306,35 +315,35 @@
       <a class="about__btn  btn" href="#">Подробнее о нас</a>
     </section>
 
-    <section class="contact-us">
-      <h2 class="contact-us__title">Контакты</h2>
-      <p class="contact-us__text">Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.</p>
-      <iframe class="contact-us__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2540.7068924532505!2d30.61722048139157!3d50.44656002150231!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4c558fe7b4d41%3A0x168024cc6745f48a!2z0LLRg9C70LjRhtGPINCR0YPQtNGW0LLQtdC70YzQvdC40LrRltCyLCAxNSwg0JrQuNGX0LI!5e0!3m2!1sru!2sua!4v1495656607458" width="564" height="222" frameborder="0" style="border:0" allowfullscreen></iframe>
-      <a class="contact-us__btn  btn" href="#">Напишите нам</a>
+    <section class="contacts  page-main__contacts">
+      <h2 class="contacts__title">Контакты</h2>
+      <p class="contacts__text">Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.</p>
+      <iframe class="contacts__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2540.7068924532505!2d30.61722048139157!3d50.44656002150231!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4c558fe7b4d41%3A0x168024cc6745f48a!2z0LLRg9C70LjRhtGPINCR0YPQtNGW0LLQtdC70YzQvdC40LrRltCyLCAxNSwg0JrQuNGX0LI!5e0!3m2!1sru!2sua!4v1495656607458" width="564" height="222" frameborder="0" style="border:0" allowfullscreen></iframe>
+      <a class="contacts__btn  btn" href="#">Напишите нам</a>
     </section>
   </main>
 
   <footer class="page-footer">
     <div class="footer__wrapper">
-      <a class="logo">
+      <a class="logo  page-footer__logo">
         <h1 class="logo__title">Device</h1>
       </a>
 
-      <div class="user-panel">
-        <a class="user-panel__item  user-panel--login" href="/">
-          <svg class="user-panel__img" width="13" height="12">
+      <div class="user-panel  page-footer__user-panel">
+        <a class="user-panel__link  user-panel__link--login" href="#">
+          <svg class="user-panel__icon" width="13" height="12">
             <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-user"></use>
           </svg>
           Войти
         </a>
-        <a class="user-panel__item  user-panel--compare" href="/">
-          <svg class="user-panel__img" width="10" height="10">
+        <a class="user-panel__link  user-panel__link--compare" href="#">
+          <svg class="user-panel__icon" width="10" height="10">
             <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-compare"></use>
           </svg>
           Сравнить
         </a>
-        <a class="user-panel__item  user-panel--basket" href="/">
-          <svg class="user-panel__img" width="12" height="12">
+        <a class="user-panel__link  user-panel__link--basket" href="#">
+          <svg class="user-panel__icon" width="12" height="12">
             <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-basket"></use>
           </svg>
           Корзина
@@ -343,7 +352,7 @@
     </div>
     <div class="footer__wrapper">
       <a class="footer__address" href="https://www.google.com.ua/maps/place/%D0%B2%D1%83%D0%BB%D0%B8%D1%86%D1%8F+%D0%91%D1%83%D0%B4%D1%96%D0%B2%D0%B5%D0%BB%D1%8C%D0%BD%D0%B8%D0%BA%D1%96%D0%B2,+15,+%D0%9A%D0%B8%D1%97%D0%B2/@50.44656,30.6172205,17z/data=!4m5!3m4!1s0x40d4c558fe7b4d41:0x168024cc6745f48a!8m2!3d50.445995!4d30.616772">г. Москва, ул. Строителей, 15</a>
-      <ul class="main-menu  main-menu__list  main-menu--footer">
+      <ul class="main-menu  page-footer__main-menu  main-menu--footer">
         <li class="main-menu__item">
           <a class="main-menu__link" href="#">Доставка</a>
         </li>
@@ -357,36 +366,36 @@
       <a class="footer__tel" href="tel:+7495-95-95">Тел.: +7 (495) 495-95-95</a>
     </div>
     <div class="footer__wrapper">
-      <div class="social-icons">
-				<a class="social-link  social-link--fb" href="#">
+      <div class="social-icons  page-footer__social-icons">
+				<a class="social-link  social-icons__social-link  social-link--fb" href="#">
           Faceboock
-          <svg class="social-link__img" width="12" height="22">
+          <svg class="social-link__icon" width="12" height="22">
             <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-faceboock"></use>
           </svg>
         </a>
-        <a class="social-link  social-link--inst" href="#">
+        <a class="social-link  social-icons__social-link  social-link--inst" href="#">
           Instagram
-          <svg class="social-link__img" width="22" height="22">
+          <svg class="social-link__icon" width="22" height="22">
             <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-instagram"></use>
           </svg>
         </a>
-				<a class="social-link  social-link--tw" href="#">
+				<a class="social-link  social-icons__social-link  social-link--tw" href="#">
           Twitter
-          <svg class="social-link__img" width="22" height="18">
+          <svg class="social-link__icon" width="22" height="18">
             <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-twitter"></use>
           </svg>
         </a>
 			</div>
 
       <a class="footer__copyright" href="https://htmlacademy.ru/">
-        <svg class="social-link__img" width="27" height="34">
+        <svg class="social-link__icon" width="27" height="34">
           <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-htmlacademy"></use>
         </svg>
       </a>
     </div>
   </footer>
 
-  <form class="popup-form" action="/" method="post">
+  <form class="popup-form  global-wrapper__popup-form" action="/" method="post">
     <label class="popup-form__label  popup-form__label--name">
       Ваше имя:
       <input class="popup-form__input" type="text" name="name" placeholder="Представьтесь, пожалуйста" autofocus required>
@@ -406,7 +415,7 @@
     <button class="popup-form__btn-close  btn-close" type="button">Закрыть</button>
   </form>
 
-  <div class="popup-map">
+  <div class="popup-map  global-wrapper__popup-map">
     <iframe class="popup-map__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2540.7372300585325!2d30.6145833157313!3d50.44599497947476!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4c558fe7b4d41%3A0x168024cc6745f48a!2z0LLRg9C70LjRhtGPINCR0YPQtNGW0LLQtdC70YzQvdC40LrRltCyLCAxNSwg0JrQuNGX0LI!5e0!3m2!1sru!2sua!4v1495734011396" width="960" height="560" frameborder="0" style="border:0" allowfullscreen></iframe>
     <button class="popup-map__btn-close  btn-close" type="button">Закрыть</button>
   </div>

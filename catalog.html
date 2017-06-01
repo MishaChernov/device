@@ -97,35 +97,35 @@
     <div class="user-panel">
       <form class="search" action="/" method="get">
         <button class="search__btn" type="submit" value="Поиск">
-          <svg class="search__img" width="16" height="17">
+          <svg class="search__icon" width="16" height="16">
             <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-search"></use>
           </svg>
           <input class="search__input" type="text" name="search" placeholder="Поиск по сайту">
-          <button class="search__btn" type="submit" value="Найти"></button>
+          <button class="search__btn" type="submit" value="Найти">Найти</button>
       </form>
 
-      <a class="user-panel__item  user-panel--login" href="#">
-        <svg class="user-panel__img" width="13" height="12">
+      <a class="user-panel__link  user-panel__link--login" href="#">
+        <svg class="user-panel__icon" width="13" height="12">
           <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-user"></use>
         </svg>
         Войти
       </a>
       <div class="user-panel__connect  user-panel__connect--active">
-        <a class="user-panel__item  user-panel--login" href="#">
-          <svg class="user-panel__img" width="13" height="12">
+        <a class="user-panel__link  user-panel__link--login" href="#">
+          <svg class="user-panel__icon" width="13" height="12">
             <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-user"></use>
           </svg>
           Михаил Сергеевич
         </a>
-        <a class="user-panel__output" href="#">Выйти</a>
+        <a class="user-panel__output-btn" href="#">Выйти</a>
       </div>
-      <a class="user-panel__item  user-panel--compare" href="#">
-        <svg class="user-panel__img" width="10" height="10">
+      <a class="user-panel__link  user-panel__link--compare" href="#">
+        <svg class="user-panel__icon" width="10" height="10">
           <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-compare"></use>
         </svg>
         Сравнить
       </a>
-      <a class="user-panel__item  user-panel--basket" href="#">
+      <a class="user-panel__link  user-panel__link--basket" href="#">
         <svg class="user-panel__img" width="12" height="12">
           <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-basket"></use>
         </svg>
@@ -134,28 +134,30 @@
     </div>
 
     <nav class="main-menu">
-      <a class="main-menu__link  main-menu__link--catalog" href="#">Каталог товаров</a>
+      <div class="main-menu__catalog">
+        <a class="main-menu__link  main-menu__link--catalog" href="#">Каталог товаров</a>
 
-      <ul class="main-menu__list  main-menu__list--catalog">
-        <li class="main-menu__item">
-          <a class="main-menu__link" href="#">Виртуальная реальность</a>
-        </li>
-        <li class="main-menu__item">
-          <a class="main-menu__link" href="catalog.html">Моноподы для селфи</a>
-        </li>
-        <li class="main-menu__item">
-          <a class="main-menu__link" href="#">Экшн-камеры</a>
-        </li>
-        <li class="main-menu__item">
-          <a class="main-menu__link" href="#">Фитнес браслеты</a>
-        </li>
-        <li class="main-menu__item">
-          <a class="main-menu__link" href="#">Умные часы</a>
-        </li>
-        <li class="main-menu__item">
-          <a class="main-menu__link" href="#">Квадрокоптеры</a>
-        </li>
-      </ul>
+        <ul class="main-menu__inner-list">
+          <li class="main-menu__inner-item">
+            <a class="main-menu__inner-link" href="#">Виртуальная реальность</a>
+          </li>
+          <li class="main-menu__inner-item">
+            <a class="main-menu__inner-link">Моноподы для селфи</a>
+          </li>
+          <li class="main-menu__inner-item">
+            <a class="main-menu__inner-link" href="#">Экшн-камеры</a>
+          </li>
+          <li class="main-menu__inner-item">
+            <a class="main-menu__inner-link" href="#">Фитнес браслеты</a>
+          </li>
+          <li class="main-menu__inner-item">
+            <a class="main-menu__inner-link" href="#">Умные часы</a>
+          </li>
+          <li class="main-menu__inner-item">
+            <a class="main-menu__inner-link" href="#">Квадрокоптеры</a>
+          </li>
+        </ul>
+      </div>
 
       <ul class="main-menu__list">
         <li class="main-menu__item">
@@ -172,11 +174,11 @@
   </header>
 
   <main class="page-main">
-    <h2 class="main__title">Моноподы для селфи</h2>
+    <h2 class="page-main__title">Моноподы для селфи</h2>
 
     <ul class="breadcrumbs">
       <li class="breadcrumbs__item">
-        <a class="breadcrumbs__link" href="#">Главная</a>
+        <a class="breadcrumbs__link" href="index.html">Главная</a>
       </li>
       <li class="breadcrumbs__item">
         <a class="breadcrumbs__link" href="#">Каталог товаров</a>
@@ -242,10 +244,12 @@
 
     <section class="products">
       <div class="sort">
-        <h3 class="sort__subtitle">Сортировать:</h3>
-        <a class="sort__link" href="#">По цене</a>
-        <a class="sort__link" href="#">По типу</a>
-        <a class="sort__link" href="#">По популярности</a>
+        <h3 class="sort__title">Сортировать:</h3>
+        <ul class="sort__list">
+          <li class="sort__item">По цене</li>
+          <li class="sort__item">По типу</li>
+          <li class="sort__item">По популярности</li>
+        </ul>
       </div>
 
       <figure class="products__item">
@@ -294,19 +298,19 @@
       </a>
 
       <div class="user-panel">
-        <a class="user-panel__item  user-panel--login" href="/">
+        <a class="user-panel__link  user-panel__link--login" href="#">
           <svg class="user-panel__img" width="13" height="12">
             <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-user"></use>
           </svg>
           Войти
         </a>
-        <a class="user-panel__item  user-panel--compare" href="/">
+        <a class="user-panel__link  user-panel__link--compare" href="#">
           <svg class="user-panel__img" width="10" height="10">
             <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-compare"></use>
           </svg>
           Сравнить
         </a>
-        <a class="user-panel__item  user-panel--basket" href="/">
+        <a class="user-panel__link  user-panel__link--basket" href="#">
           <svg class="user-panel__img" width="12" height="12">
             <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-basket"></use>
           </svg>
@@ -316,7 +320,7 @@
     </div>
     <div class="footer__wrapper">
       <a class="footer__address" href="https://www.google.com.ua/maps/place/%D0%B2%D1%83%D0%BB%D0%B8%D1%86%D1%8F+%D0%91%D1%83%D0%B4%D1%96%D0%B2%D0%B5%D0%BB%D1%8C%D0%BD%D0%B8%D0%BA%D1%96%D0%B2,+15,+%D0%9A%D0%B8%D1%97%D0%B2/@50.44656,30.6172205,17z/data=!4m5!3m4!1s0x40d4c558fe7b4d41:0x168024cc6745f48a!8m2!3d50.445995!4d30.616772">г. Москва, ул. Строителей, 15</a>
-      <ul class="main-menu  main-menu__list  main-menu--footer">
+      <ul class="main-menu  main-menu--footer">
         <li class="main-menu__item">
           <a class="main-menu__link" href="#">Доставка</a>
         </li>
@@ -333,26 +337,26 @@
       <div class="social-icons">
 				<a class="social-link  social-link--fb" href="#">
           Faceboock
-          <svg class="social-link__img" width="12" height="22">
+          <svg class="social-link__icon" width="12" height="22">
             <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-faceboock"></use>
           </svg>
         </a>
         <a class="social-link  social-link--inst" href="#">
           Instagram
-          <svg class="social-link__img" width="22" height="22">
+          <svg class="social-link__icon" width="22" height="22">
             <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-instagram"></use>
           </svg>
         </a>
 				<a class="social-link  social-link--tw" href="#">
           Twitter
-          <svg class="social-link__img" width="22" height="18">
+          <svg class="social-link__icon" width="22" height="18">
             <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-twitter"></use>
           </svg>
         </a>
 			</div>
 
       <a class="footer__copyright" href="https://htmlacademy.ru/">
-        <svg class="social-link__img" width="27" height="34">
+        <svg class="social-link__icon" width="27" height="34">
           <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-htmlacademy"></use>
         </svg>
       </a>
