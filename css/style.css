@@ -649,6 +649,7 @@ ul {
   .main-menu__item:nth-child(3) {
     margin-right: 8%; }
   .main-menu__item--catalog {
+    position: relative;
     padding-bottom: 160px; }
     .main-menu__item--catalog:hover .main-menu__inner-list {
       display: flex; }
@@ -700,10 +701,10 @@ ul {
 
 .main-menu__inner-list {
   position: absolute;
-  left: 132px;
+  left: -55px;
   z-index: 400;
   display: none;
-  width: 50%;
+  width: 1160px;
   padding-bottom: 40px;
   padding-left: 58px;
   padding-right: 389px;
@@ -711,7 +712,8 @@ ul {
   flex-basis: 650px;
   flex-wrap: wrap;
   align-items: baseline;
-  background-color: #f7e296; }
+  background-color: #f7e296;
+  box-sizing: border-box; }
 
 .main-menu__inner-item {
   margin-right: 2%;
