@@ -1,9 +1,8 @@
 .page-header {
-  padding: 0 5%;
-  padding-bottom: 160px;
-  margin: 0 20px;
+  padding: 0 55px;
 
   background-color: $secondary-bg-color;
+  box-sizing: border-box;
 }
 
 .page-header__logo {

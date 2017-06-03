@@ -9,4 +9,8 @@
   font-size: 48px;
   text-transform: uppercase;
   color: $secondary-text-color;
+
+  &--color {
+    color: #ffc600;
+  }
 }

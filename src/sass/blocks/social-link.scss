@@ -1,0 +1,35 @@
+.social-link {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 10px;
+  width: 37px;
+  height: 36px;
+
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+  opacity: 0.3;
+
+  font-size: 0;
+  transition-duration: 0.5s;
+
+  &:last-child {
+    margin-right: 0;
+  }
+  &:hover {
+    opacity: 1;
+    transition-duration: 0.5s;
+  }
+  &:active {
+    opacity: 0.1;
+  }
+}
+
+.social-link__icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  fill: #ffffff;
+}

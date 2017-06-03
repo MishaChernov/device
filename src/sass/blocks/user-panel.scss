@@ -27,7 +27,7 @@
     margin-right: 19%;
   }
   &:last-child {
-    margin-right: 0;
+    margin-right: 7px;
   }
   @include hover-opacity;
   @include active-opacity;
@@ -41,4 +41,8 @@
 
   @include hover-opacity;
   @include active-opacity;
+
+  &--color {
+    fill: #ffc600;
+  }
 }

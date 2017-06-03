@@ -2,9 +2,6 @@
   display: none;
   flex-basis: 1040px;
 
-  &--one {
-    display: flex;
-  }
   &--second .slide__description {
     &::after {
       content: "02";
@@ -31,7 +28,7 @@
   width: 50%;
   margin-left: auto;
   padding-top: 38px;
-  padding-left: 20px;
+  padding-left: 17px;
 
   box-sizing: border-box;
 
@@ -51,7 +48,7 @@
     z-index: 100;
 
     top: 60px;
-    right: 8%;
+    right: 50px;
 
     font-family: $secondary-font-family;
     font-size: 179px;
@@ -67,10 +64,7 @@
   padding-right: 29%;
   margin-bottom: 15px;
 
-  font-family: $secondary-font-family;
-  font-size: 48px;
-  line-height: 58px;
-  color: $secondary-text-color;
+  @include title;
 
   &--padding {
     padding-right: 55px;

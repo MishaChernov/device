@@ -1,5 +1,15 @@
 .page-main {
   position: relative;
   top: -111px;
-  margin: 0 20px;
+  margin-bottom: -24px;
+}
+
+.page-main__about {
+  float: left;
+  width: 50%;
+}
+
+.page-main__contacts {
+  float: right;
+  width: 50%;
 }

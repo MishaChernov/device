@@ -17,3 +17,10 @@
     opacity: 0.3;
   }
 }
+
+@mixin title {
+  font-family: $secondary-font-family;
+  font-size: 48px;
+  line-height: 58px;
+  color: $secondary-text-color;
+}

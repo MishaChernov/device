@@ -4,13 +4,12 @@
 @import "global/fonts.scss";
 @import "global/global-styles.scss";
 
-@import "blocks/page-footer.scss";
 @import "blocks/page-header.scss";
 @import "blocks/page-main.scss";
+@import "blocks/btn.scss";
 @import "blocks/about.scss";
 @import "blocks/breadcrumbs.scss";
 @import "blocks/brends.scss";
-@import "blocks/btn.scss";
 @import "blocks/contacts.scss";
 @import "blocks/filter.scss";
 @import "blocks/logo.scss";
@@ -28,3 +27,4 @@
 @import "blocks/social-link.scss";
 @import "blocks/table.scss";
 @import "blocks/user-panel.scss";
+@import "blocks/page-footer.scss";

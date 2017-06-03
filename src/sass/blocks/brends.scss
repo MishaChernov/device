@@ -1,0 +1,85 @@
+.brends {
+  display: flex;
+  margin-bottom: 110px;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.brends__link {
+  font-size: 0;
+  width: 260px;
+  height: 100px;
+
+  background-repeat: no-repeat;
+  background-position: center;
+
+  transition-duration: 0.8s;
+
+  &:hover {
+    transition-duration: 0.8s;
+  }
+  &--dji {
+    width: 130px;
+    height: 78px;
+    margin-right: 30px;
+    margin-left: 18px;
+    background-image: url("../img/logo-1.jpg");
+    &:hover {
+      background-image: url("../img/logo-1-hover.jpg");
+    }
+  }
+  &--gadjets {
+    height: 40px;
+    margin-left: -20px;
+    background-image: url("../img/logo-2.jpg");
+    &:hover {
+      background-image: url("../img/logo-2-hover.jpg");
+    }
+  }
+  &--gopro {
+    width: 200px;
+    height: 50px;
+    background-image: url("../img/logo-3.jpg");
+    &:hover {
+      background-image: url("../img/logo-3-hover.jpg");
+    }
+  }
+  &--vive {
+    width: 200px;
+    height: 50px;
+    background-image: url("../img/logo-4.jpg");
+    &:hover {
+      background-image: url("../img/logo-4-hover.jpg");
+    }
+  }
+}
+
+@media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+  .brends__link {
+    &--dji {
+      background-image: url("../img/logo-1@2x.jpg");
+      &:hover {
+        background-image: url("../img/logo-1-hover@2x.jpg");
+      }
+    }
+    &--gadjets {
+      background-image: url("../img/logo-2@2x.jpg");
+      &:hover {
+        background-image: url("../img/logo-2-hover@2x.jpg");
+      }
+    }
+    &--gopro {
+      background-image: url("../img/logo-3@2x.jpg");
+      &:hover {
+        background-image: url("../img/logo-3-hover@2x.jpg");
+      }
+    }
+    &--vive {
+      background-image: url("../img/logo-4@2x.jpg");
+      &:hover {
+        background-image: url("../img/logo-4-hover@2x.jpg");
+      }
+    }
+  }
+}
