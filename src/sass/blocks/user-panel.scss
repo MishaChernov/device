@@ -23,14 +23,18 @@
   text-align: right;
   text-decoration: none;
 
+  @include hover-opacity;
+  @include active-opacity;
+
   &--login {
     margin-right: 19%;
   }
   &:last-child {
     margin-right: 7px;
   }
-  @include hover-opacity;
-  @include active-opacity;
+  &--hidden {
+    display: none;
+  }
 }
 
 .user-panel__icon {
@@ -45,4 +49,19 @@
   &--color {
     fill: #ffc600;
   }
+}
+
+.user-panel__connect {
+  margin-right: -12px;
+}
+
+.user-panel__output-btn {
+  transform: translateX(-50px);
+
+  background: none;
+  outline: none;
+  border: none;
+  opacity: 0.3;
+
+  cursor: pointer;
 }

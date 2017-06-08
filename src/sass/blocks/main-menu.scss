@@ -34,10 +34,18 @@
   &--catalog {
     position: relative;
     padding-bottom: 160px;
+    transition-duration: 1.3s;
 
     &:hover .main-menu__inner-list {
     display: flex;
     }
+    &:hover {
+      padding-bottom: 160px;
+      transition-duration: 1.3s;
+    }
+  }
+  &--padding {
+    padding-bottom: 47px;
   }
 }
 

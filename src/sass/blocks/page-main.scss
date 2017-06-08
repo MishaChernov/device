@@ -2,6 +2,11 @@
   position: relative;
   top: -111px;
   margin-bottom: -24px;
+
+  &--secondary {
+    top: 0;
+    margin: 0 auto;
+  }
 }
 
 .page-main__about {
@@ -12,4 +17,32 @@
 .page-main__contacts {
   float: right;
   width: 50%;
+}
+
+.page-main__title {
+  margin-top: 33px;
+  margin-bottom: 14px;
+  margin-left: 60px;
+  @include title;
+}
+
+.page-main__breadcrumbs {
+  margin-left: 60px;
+}
+
+.page-main__wrapper {
+  position: relative;
+  display: flex;
+  vertical-align: middle;
+  flex-basis: 1200px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    display: block;
+    width: 100%;
+    height: 70px;
+    background-color: rgba(0, 0, 0, 0.08);
+  }
 }
