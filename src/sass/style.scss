@@ -3,10 +3,12 @@
 @import "global/mixins.scss";
 @import "global/fonts.scss";
 @import "global/global-styles.scss";
+@import "global/global-wrapper.scss";
 
 @import "blocks/page-header.scss";
 @import "blocks/page-main.scss";
 @import "blocks/btn.scss";
+@import "blocks/btn-close.scss";
 @import "blocks/about.scss";
 @import "blocks/breadcrumbs.scss";
 @import "blocks/brends.scss";

@@ -1,0 +1,43 @@
+.btn-close {
+  display: block;
+  width: 60px;
+  height: 60px;
+
+  font-size: 0;
+
+  background: none;
+  border: none;
+  outline: none;
+  background-color: rgb(255, 200, 0);
+  opacity: 0.5;
+  border-radius: 50%;
+
+  cursor: pointer;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 29px;
+    right: 13px;
+
+    display: block;
+    width: 35px;
+    height: 2px;
+
+    background-color: #ffffff;
+  }
+  &::before {
+    transform: rotate(45deg);
+  }
+  &::after {
+    transform: rotate(-45deg);
+  }
+  &:hover {
+    opacity: 1;
+  }
+  &:active::before,
+  &:active::after {
+    opacity: 0.3;
+  }
+}
