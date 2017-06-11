@@ -414,6 +414,7 @@ template {
   src: local("Open Sans Light"), local("OpenSans-Light"), url("../fonts/opensanslight.woff") format("woff"), url("../fonts/opensanslight.woff2") format("woff2"); }
 
 body {
+  position: relative;
   min-width: 1200px;
   font-family: "Open Sans", "Arial", sans-serif;
   font-style: normal;
@@ -434,6 +435,18 @@ ul {
   content: "";
   display: table;
   clear: both; }
+
+.global-wrapper__popup-map {
+  position: absolute;
+  bottom: 386px;
+  left: 50%;
+  transform: translateX(-50%); }
+
+.global-wrapper__popup-form {
+  position: absolute;
+  top: 1100px;
+  left: 50%;
+  transform: translateX(-50%); }
 
 .page-header {
   padding: 0 55px;
@@ -510,6 +523,36 @@ ul {
     box-shadow: none; }
   .btn:active {
     color: rgba(0, 0, 0, 0.3); }
+
+.btn-close {
+  display: block;
+  width: 60px;
+  height: 60px;
+  font-size: 0;
+  background: none;
+  border: none;
+  outline: none;
+  background-color: #ffc800;
+  opacity: 0.5;
+  border-radius: 50%;
+  cursor: pointer; }
+  .btn-close::before, .btn-close::after {
+    content: "";
+    position: absolute;
+    top: 29px;
+    right: 13px;
+    display: block;
+    width: 35px;
+    height: 2px;
+    background-color: #ffffff; }
+  .btn-close::before {
+    transform: rotate(45deg); }
+  .btn-close::after {
+    transform: rotate(-45deg); }
+  .btn-close:hover {
+    opacity: 1; }
+  .btn-close:active::before, .btn-close:active::after {
+    opacity: 0.3; }
 
 .about__title {
   position: relative;
@@ -1108,10 +1151,96 @@ ul {
   color: #000000; }
 
 .popup-form {
-  display: none; }
+  display: none;
+  background-color: #ffffff;
+  box-shadow: 0px 8px 28px -5px rgba(0, 0, 0, 0.75); }
+  .popup-form--active {
+    display: block; }
+
+.popup-form__wrapper {
+  position: relative;
+  display: flex;
+  width: 960px;
+  padding: 90px 100px;
+  box-sizing: border-box;
+  flex-wrap: wrap;
+  align-items: center; }
+
+.popup-form__label--name {
+  margin-right: 40px; }
+
+.popup-form__label--name, .popup-form__label--email {
+  width: 360px;
+  margin-bottom: 35px; }
+
+.popup-form__label--message {
+  width: 100%; }
+
+.popup-form__input,
+.popup-form__textarea {
+  width: 100%;
+  padding: 15px;
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-size: 14px;
+  color: #000000;
+  background-color: #e6e6e6;
+  opacity: 0.6;
+  border: none;
+  outline: none;
+  box-sizing: border-box; }
+  .popup-form__input:hover,
+  .popup-form__textarea:hover {
+    opacity: 0.8; }
+  .popup-form__input:active,
+  .popup-form__textarea:active {
+    outline: none; }
+  .popup-form__input:focus,
+  .popup-form__textarea:focus {
+    color: #464646;
+    background: none;
+    box-shadow: 0 0 0 3px #f7e296; }
+
+.popup-form__textarea {
+  min-height: 125px;
+  margin-bottom: 45px;
+  resize: none; }
+
+.popup-form__label-text {
+  margin-bottom: 10px;
+  font-family: "Gilroy", "Arial", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: #000000;
+  letter-spacing: 1px; }
+
+.popup-form__btn {
+  background: none;
+  border: none;
+  outline: none;
+  background-color: #f0c52e;
+  box-shadow: inset 0 -7px 0 0 #ffffff, inset 0 7px 0 0 #ffffff; }
+
+.popup-form__btn-close {
+  position: absolute;
+  top: 30px;
+  right: 30px; }
 
 .popup-map {
-  display: none; }
+  display: none;
+  width: 960px;
+  height: 559px;
+  background: #ffffff url("../img/map-big.jpg");
+  box-shadow: 0px 8px 28px -5px rgba(0, 0, 0, 0.75); }
+  .popup-map--active {
+    display: block; }
+
+.popup-map__wrapper {
+  position: relative; }
+
+.popup-map__btn-close {
+  position: absolute;
+  top: 30px;
+  right: 30px; }
 
 .products {
   width: 68%;
