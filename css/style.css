@@ -1153,7 +1153,10 @@ ul {
 .popup-form {
   display: none;
   background-color: #ffffff;
-  box-shadow: 0px 8px 28px -5px rgba(0, 0, 0, 0.75); }
+  box-shadow: 0px 8px 28px -5px rgba(0, 0, 0, 0.75);
+  animation-name: form-visible;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-out; }
   .popup-form--active {
     display: block; }
 
@@ -1225,12 +1228,27 @@ ul {
   top: 30px;
   right: 30px; }
 
+@keyframes form-visible {
+  0% {
+    left: 50%;
+    top: 2200px;
+    transform: scale(0) translateX(-50%);
+    opacity: 0.5; }
+  100% {
+    left: 50%;
+    top: 1100px;
+    transform: scale(1) translateX(-50%);
+    opacity: 1; } }
+
 .popup-map {
   display: none;
   width: 960px;
   height: 559px;
   background: #ffffff url("../img/map-big.jpg");
-  box-shadow: 0px 8px 28px -5px rgba(0, 0, 0, 0.75); }
+  box-shadow: 0px 8px 28px -5px rgba(0, 0, 0, 0.75);
+  animation-name: map-visible;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-out; }
   .popup-map--active {
     display: block; }
 
@@ -1241,6 +1259,16 @@ ul {
   position: absolute;
   top: 30px;
   right: 30px; }
+
+@keyframes map-visible {
+  0% {
+    left: 60%;
+    transform: scale(0) translateX(-60%);
+    opacity: 0.5; }
+  100% {
+    left: 50%;
+    transform: scale(1) translateX(-50%);
+    opacity: 1; } }
 
 .products {
   width: 68%;

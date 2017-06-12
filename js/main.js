@@ -10,8 +10,6 @@ var btnOpenPopupForm = document.querySelector('.contacts__btn');
 
 var ENTER_KEY_CODE = 27;
 
-popupMap.classList.remove('popup-map--active');
-
 function popupMapOpen() {
   event.preventDefault();
   popupMap.classList.add('popup-map--active');
