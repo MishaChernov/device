@@ -116,7 +116,7 @@
         </svg>
         Войти
       </a>
-      <div class="user-panel__connect">
+      <div class="user-panel__connect  user-panel__connect--active">
         <a class="user-panel__link  user-panel__link--login" href="#">
           <svg class="user-panel__icon" width="13" height="12">
             <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-user"></use>
@@ -195,129 +195,131 @@
       </ul>
     </div>
     <div class="page-main__wrapper">
-      <form class="filter" action="/" method="get">
-        <div class="filter__wrapper">
-          <h3 class="filter__title">Фильтр:</h3>
-          <fieldset class="filter__item  filter__item--price">
-            <legend class="filter__subtitle">Стоимость</legend>
-            <div class="filter__range  filter__range--price">
-              <span class="filter__range-line">Линия стоимости товара</span>
-              <label class="filter__price  filter__price--min">
-                <span class="filter__price-text">от</span>
-                <input class="filter__input  filter__input--price" type="text" name="min-price" value="0">
+      <div class="container  container--flex">
+        <form class="filter" action="/" method="get">
+          <div class="filter__wrapper">
+            <h3 class="filter__title">Фильтр:</h3>
+            <fieldset class="filter__item  filter__item--price">
+              <legend class="filter__subtitle">Стоимость</legend>
+              <div class="filter__range  filter__range--price">
+                <span class="filter__range-line">Линия стоимости товара</span>
+                <label class="filter__price  filter__price--min">
+                  <span class="filter__price-text">от</span>
+                  <input class="filter__input  filter__input--price" type="text" name="min-price" value="0">
+                </label>
+                <label class="filter__price  filter__price--max">
+                  <span class="filter__price-text">до</span>
+                  <input class="filter__input  filter__input--price" type="text" name="max-price" value="5000">
+                </label>
+              </div>
+            </fieldset>
+
+            <fieldset class="filter__item  filter__item--checkbox">
+              <legend class="filter__subtitle">Цвет</legend>
+              <label class="filter__label  filter__label--checkbox">
+                <input class="filter__checkbox" type="checkbox" name="color-1" value="black" checked>
+                <span class="filter__label-text  filter__label-text--checkbox">Черный</span>
               </label>
-              <label class="filter__price  filter__price--max">
-                <span class="filter__price-text">до</span>
-                <input class="filter__input  filter__input--price" type="text" name="max-price" value="5000">
+              <label class="filter__label  filter__label--checkbox">
+                <input class="filter__checkbox" type="checkbox" name="color-2" value="white">
+                <span class="filter__label-text  filter__label-text--checkbox">Белый</span>
               </label>
-            </div>
-          </fieldset>
+              <label class="filter__label  filter__label--checkbox">
+                <input class="filter__checkbox" type="checkbox" name="color-3" value="blue" checked>
+                <span class="filter__label-text  filter__label-text--checkbox">Синий</span>
+              </label>
+              <label class="filter__label  filter__label--checkbox">
+                <input class="filter__checkbox" type="checkbox" name="color-4" value="red" checked>
+                <span class="filter__label-text  filter__label-text--checkbox">Красный</span>
+              </label>
+              <label class="filter__label  filter__label--checkbox">
+                <input class="filter__checkbox" type="checkbox" name="color-5" value="pink">
+                <span class="filter__label-text  filter__label-text--checkbox">Розовый</span>
+              </label>
+            </fieldset>
 
-          <fieldset class="filter__item  filter__item--checkbox">
-            <legend class="filter__subtitle">Цвет</legend>
-            <label class="filter__label  filter__label--checkbox">
-              <input class="filter__checkbox" type="checkbox" name="color-1" value="black" checked>
-              <span class="filter__label-text  filter__label-text--checkbox">Черный</span>
-            </label>
-            <label class="filter__label  filter__label--checkbox">
-              <input class="filter__checkbox" type="checkbox" name="color-2" value="white">
-              <span class="filter__label-text  filter__label-text--checkbox">Белый</span>
-            </label>
-            <label class="filter__label  filter__label--checkbox">
-              <input class="filter__checkbox" type="checkbox" name="color-3" value="blue" checked>
-              <span class="filter__label-text  filter__label-text--checkbox">Синий</span>
-            </label>
-            <label class="filter__label  filter__label--checkbox">
-              <input class="filter__checkbox" type="checkbox" name="color-4" value="red" checked>
-              <span class="filter__label-text  filter__label-text--checkbox">Красный</span>
-            </label>
-            <label class="filter__label  filter__label--checkbox">
-              <input class="filter__checkbox" type="checkbox" name="color-5" value="pink">
-              <span class="filter__label-text  filter__label-text--checkbox">Розовый</span>
-            </label>
-          </fieldset>
+            <fieldset class="filter__item  filter__item--radio">
+              <legend class="filter__subtitle">Bluetooth</legend>
+              <label class="filter__label  filter__label--radio">
+                <input class="filter__radio" type="radio" name="radio" value="yes" checked>
+                <span class="filter__label-text  filter__label-text--radio">Есть</span>
+              </label>
+              <label class="filter__label  filter__label--radio">
+                <input class="filter__radio" type="radio" name="radio" value="no">
+                <span class="filter__label-text  filter__label-text--radio">Нет</span>
+              </label>
+            </fieldset>
 
-          <fieldset class="filter__item  filter__item--radio">
-            <legend class="filter__subtitle">Bluetooth</legend>
-            <label class="filter__label  filter__label--radio">
-              <input class="filter__radio" type="radio" name="radio" value="yes" checked>
-              <span class="filter__label-text  filter__label-text--radio">Есть</span>
-            </label>
-            <label class="filter__label  filter__label--radio">
-              <input class="filter__radio" type="radio" name="radio" value="no">
-              <span class="filter__label-text  filter__label-text--radio">Нет</span>
-            </label>
-          </fieldset>
-
-          <input class="filter__btn  btn" type="submit" value="Показать">
-        </div>
-      </form>
-
-      <section class="products">
-        <div class="sort">
-          <h3 class="sort__title">Сортировать:</h3>
-          <ul class="sort__list">
-            <li class="sort__item  sort__item--active">По цене</li>
-            <li class="sort__item">По типу</li>
-            <li class="sort__item">По популярности</li>
-          </ul>
-        </div>
-
-        <div class="products__wrapper">
-          <figure class="products__item">
-            <img class="products__img" src="img/item-1.jpg" srcset="img/item-1@2x.jpg" width="360" height="380" alt="Любительская селфи-палка">
-            <figcaption class="products__description">
-              <h4 class="products__name">Любительская селфи палка</h4>
-              <span class="products__price">500 руб.</span>
-            </figcaption>
-            <div class="products__buttons">
-              <button class="products__btn  products__btn--basket  btn" type="button">В корзину</button>
-              <button class="products__btn  products__btn--compare" type="button">Добавить к сравнению</button>
-            </div>
-          </figure>
-          <figure class="products__item">
-            <img class="products__img" src="img/item-2.jpg" srcset="img/item-2@2x.jpg" width="360" height="380" alt="Професиональная селфи-палка">
-            <figcaption class="products__description">
-              <h4 class="products__name  products__name--padding">Профессиональная селфи-палка </h4>
-              <span class="products__price">1 500 руб.</span>
-            </figcaption>
-            <div class="products__buttons">
-              <button class="products__btn  products__btn--basket  btn" type="button">В корзину</button>
-              <button class="products__btn  products__btn--compare" type="button">Добавить к сравнению</button>
-            </div>
-          </figure>
-          <figure class="products__item">
-            <img class="products__img" src="img/item-3.jpg" srcset="img/item-3@2x.jpg" width="360" height="380" alt="Непотопляемая селфи-палка">
-            <figcaption class="products__description">
-              <h4 class="products__name">Непотопляемая селфи-палка</h4>
-              <span class="products__price">2 500 руб.</span>
-            </figcaption>
-            <div class="products__buttons">
-              <button class="products__btn  products__btn--basket  btn" type="button">В корзину</button>
-              <button class="products__btn  products__btn--compare" type="button">Добавить к сравнению</button>
-            </div>
-          </figure>
-          <figure class="products__item  products__item--new">
-            <img class="products__img" src="img/item-4.jpg" srcset="img/item-4@2x.jpg" width="360" height="380" alt="Селфи-палка «Следуй за мной»">
-            <figcaption class="products__description">
-              <h4 class="products__name">Селфи-палка «Следуй за мной»</h4>
-              <span class="products__price">4 500 руб.</span>
-            </figcaption>
-            <div class="products__buttons">
-              <button class="products__btn  products__btn--basket  btn" type="button">В корзину</button>
-              <button class="products__btn  products__btn--compare" type="button">Добавить к сравнению</button>
-            </div>
-          </figure>
-
-          <div class="pagination  products__pagination">
-            <a class="pagination__link" href="#">Назад</a>
-            <a class="pagination__link  pagination__link--active" href="#">1</a>
-            <a class="pagination__link" href="#">2</a>
-            <a class="pagination__link" href="#">3</a>
-            <a class="pagination__link" href="#">Вперед</a>
+            <input class="filter__btn  btn" type="submit" value="Показать">
           </div>
-        </div>
-      </section>
+        </form>
+
+        <section class="products">
+          <div class="sort">
+            <h3 class="sort__title">Сортировать:</h3>
+            <ul class="sort__list">
+              <li class="sort__item  sort__item--active">По цене</li>
+              <li class="sort__item">По типу</li>
+              <li class="sort__item">По популярности</li>
+            </ul>
+          </div>
+
+          <div class="products__wrapper">
+            <figure class="products__item">
+              <img class="products__img" src="img/item-1.jpg" srcset="img/item-1@2x.jpg" width="360" height="380" alt="Любительская селфи-палка">
+              <figcaption class="products__description">
+                <h4 class="products__name">Любительская селфи палка</h4>
+                <span class="products__price">500 руб.</span>
+              </figcaption>
+              <div class="products__buttons">
+                <button class="products__btn  products__btn--basket  btn" type="button">В корзину</button>
+                <button class="products__btn  products__btn--compare" type="button">Добавить к сравнению</button>
+              </div>
+            </figure>
+            <figure class="products__item">
+              <img class="products__img" src="img/item-2.jpg" srcset="img/item-2@2x.jpg" width="360" height="380" alt="Професиональная селфи-палка">
+              <figcaption class="products__description">
+                <h4 class="products__name  products__name--padding">Профессиональная селфи-палка </h4>
+                <span class="products__price">1 500 руб.</span>
+              </figcaption>
+              <div class="products__buttons">
+                <button class="products__btn  products__btn--basket  btn" type="button">В корзину</button>
+                <button class="products__btn  products__btn--compare" type="button">Добавить к сравнению</button>
+              </div>
+            </figure>
+            <figure class="products__item">
+              <img class="products__img" src="img/item-3.jpg" srcset="img/item-3@2x.jpg" width="360" height="380" alt="Непотопляемая селфи-палка">
+              <figcaption class="products__description">
+                <h4 class="products__name">Непотопляемая селфи-палка</h4>
+                <span class="products__price">2 500 руб.</span>
+              </figcaption>
+              <div class="products__buttons">
+                <button class="products__btn  products__btn--basket  btn" type="button">В корзину</button>
+                <button class="products__btn  products__btn--compare" type="button">Добавить к сравнению</button>
+              </div>
+            </figure>
+            <figure class="products__item  products__item--new">
+              <img class="products__img" src="img/item-4.jpg" srcset="img/item-4@2x.jpg" width="360" height="380" alt="Селфи-палка «Следуй за мной»">
+              <figcaption class="products__description">
+                <h4 class="products__name">Селфи-палка «Следуй за мной»</h4>
+                <span class="products__price">4 500 руб.</span>
+              </figcaption>
+              <div class="products__buttons">
+                <button class="products__btn  products__btn--basket  btn" type="button">В корзину</button>
+                <button class="products__btn  products__btn--compare" type="button">Добавить к сравнению</button>
+              </div>
+            </figure>
+
+            <div class="pagination  products__pagination">
+              <a class="pagination__link" href="#">Назад</a>
+              <a class="pagination__link  pagination__link--active" href="#">1</a>
+              <a class="pagination__link" href="#">2</a>
+              <a class="pagination__link" href="#">3</a>
+              <a class="pagination__link" href="#">Вперед</a>
+            </div>
+          </div>
+        </section>
+      </div>
     </div>
   </main>
 
