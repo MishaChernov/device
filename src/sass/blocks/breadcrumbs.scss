@@ -17,20 +17,16 @@
       display: none;
     }
   }
-  &::after,
-  &::before {
-    content: "";
+  &:before {
+    content: ">";
     position: absolute;
     right: -18px;
-    top: 18px;
-    transform: translateY(-50%) rotate(-45deg);
-    width: 6px;
-    height: 2px;
-    background-color: #000000;
-  }
-  &:before {
-    top: 15px;
-    transform: translateY(-50%) rotate(45deg);
+    top: 1px;
+
+    font-family: $secondary-font-family;
+    font-size: 14px;
+    font-weight: 700;
+    color: #000000;
   }
 }
 

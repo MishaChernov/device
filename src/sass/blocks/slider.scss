@@ -1,7 +1,8 @@
 .slider {
   position: relative;
+  top: -111px;
   display: block;
-  margin-bottom: 100px;
+  margin-bottom: -5px;
 }
 
 .slider__radio {
@@ -12,8 +13,8 @@
 .slider__controls {
   position: absolute;
   z-index: 300;
-  right: 7%;
-  bottom: 146px;
+  right: 86px;
+  bottom: 140px;
 }
 
 .slider__toggle {
@@ -44,9 +45,9 @@
   }
 }
 
-#toggle-1:checked ~ .slide--one,
+#toggle-1:checked ~ .slide--first,
 #toggle-2:checked ~ .slide--second,
-#toggle-3:checked ~ .slide--three {
+#toggle-3:checked ~ .slide--third {
   display: flex;
   animation-name: slider-anim;
   animation-duration: 0.5s;

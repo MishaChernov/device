@@ -1,29 +1,22 @@
 .filter {
-  width: 35%;
-  margin-left: auto;
-  margin-right: 70px;
-  background-color: #eeeeee;
-  box-sizing: border-box;
-}
-
-.filter__wrapper {
-  display: flex;
-  flex-wrap: wrap;
   width: 200px;
-  margin-left: auto;
+  padding-right: 70px;
   margin-right: 70px;
+  padding-left: 57px;
+
+  background-color: #eeeeee;
 }
 
 .filter__title {
   margin-top: 20px;
-  margin-bottom: 75px;
+  margin-bottom: 88px;
   padding-left: 3px;
 
   font-family: $secondary-font-family;
   font-size: 16px;
   font-weight: 700;
   text-transform: uppercase;
-  text-align: right;
+  text-align: left;
   color: $secondary-text-color;
   letter-spacing: 3px;
 }
@@ -35,7 +28,7 @@
   padding: 0;
   margin: 0;
   margin-top: 14px;
-  margin-bottom: 17px;
+  margin-bottom: 32px;
 
   border: none;
   box-sizing: border-box;
@@ -45,7 +38,7 @@
   }
   &--checkbox {
     padding-top: 10px;
-    margin-bottom: 22px;
+    margin-bottom: 35px;
   }
   &--radio {
     padding-top: 10px;
@@ -188,6 +181,9 @@
   }
   &--radio {
     &::before {
+      width: 20px;
+      height: 20px;
+
       background-color: #efefef;
       border: 2px solid #dbdbdb;
       border-radius: 50%;
@@ -231,7 +227,7 @@
       content: "";
       position: absolute;
       top: 10px;
-      left: 9px;
+      left: 7px;
 
       display: none;
       width: 6px;
@@ -245,10 +241,10 @@
 }
 
 .filter__btn {
-  background-color: #f0c52e;
-  box-shadow: inset 0 -8px 0 0 #efefef,
-              inset 0 8px 0 0 #efefef;
+  width: 200px;
   border: none;
+  outline: none;
+
   &:active {
     outline: none;
   }
@@ -263,4 +259,24 @@
 .filter__checkbox:checked ~ .filter__label-text::after,
 .filter__radio:checked ~ .filter__label-text::before {
   display: block;
+}
+
+@media (min-width: 2500px) {
+  .filter {
+    position: relative;
+
+    &::before {
+      content: "";
+      z-index: 1;
+      position: absolute;
+      top: 0;
+      left: -900px;
+
+      display: block;
+      width: 900px;
+      height: 100%;
+
+      background-color: #eeeeee;
+    }
+  }
 }

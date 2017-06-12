@@ -9,15 +9,17 @@ body {
   width: 1160px;
   margin: 0 auto;
   padding: 0 20px;
+  height: 100%;
+
+  @include clearfix;
+
+  &--flex {
+    display: flex;
+    align-content: stretch;
+  }
 }
 
 ul {
   margin: 0;
   padding: 0;
-}
-
-.clearfix::after {
-  content: "";
-  display: table;
-  clear: both;
 }

@@ -2,12 +2,12 @@
   "name": "Device",
   "version": "1.0.0",
   "private": true,
-  "description": "Резиновый проект, Девайс",
+  "description": "Девайс",
   "author": "Misha Chernov",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/MishaChernov/sedona"
+    "url": "https://github.com/MishaChernov/device"
   },
   "devDependencies": {
     "autoprefixer": "^6.4.1",

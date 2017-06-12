@@ -29,6 +29,9 @@
   &--login {
     margin-right: 19%;
   }
+  &--login-active {
+    margin-right: 0;
+  }
   &:last-child {
     margin-right: 7px;
   }
@@ -52,12 +55,15 @@
 }
 
 .user-panel__connect {
-  margin-right: -12px;
+  display: none;
+  margin-right: 44px;
+
+  &--active {
+    display: block;
+  }
 }
 
 .user-panel__output-btn {
-  transform: translateX(-50px);
-
   background: none;
   outline: none;
   border: none;

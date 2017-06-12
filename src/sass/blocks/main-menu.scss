@@ -34,18 +34,25 @@
   &--catalog {
     position: relative;
     padding-bottom: 160px;
-    transition-duration: 1.3s;
 
     &:hover .main-menu__inner-list {
-    display: flex;
-    }
-    &:hover {
-      padding-bottom: 160px;
-      transition-duration: 1.3s;
+      display: flex;
+      animation-name: inner-menu;
+      animation-duration: 0.5s;
     }
   }
   &--padding {
     padding-bottom: 47px;
+    transition-duration: 1s;
+  }
+}
+
+@keyframes inner-menu {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
 

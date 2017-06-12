@@ -14,7 +14,6 @@ var svgmin = require('gulp-svgmin');
 var server = require('browser-sync').create();
 var run = require('run-sequence');
 var ghPages = require('gulp-gh-pages');
-var uglify = require('gulp-uglify');
 var del = require('del');
 
 gulp.task('style', function() {
@@ -43,7 +42,6 @@ gulp.task('style', function() {
 gulp.task('minjs', function() {
   gulp.src('src/js/*.js')
     .pipe(gulp.dest('build/js/'))
-    .pipe(uglify())
     .pipe(gulp.dest('build/js/minjs'));
 });
 
