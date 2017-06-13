@@ -521,7 +521,7 @@ ul {
   transition-duration: 0.5s; }
 
 .btn:hover {
-  background-color: #f0c52e;
+  background: #f0c52e;
   transition-duration: 0.5s; }
 
 .btn:active {
