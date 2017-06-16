@@ -447,7 +447,7 @@ ul {
 
 .global-wrapper__popup-form {
   position: absolute;
-  top: 1100px;
+  bottom: 386px;
   left: 50%;
   transform: translateX(-50%); }
 
@@ -724,9 +724,6 @@ ul {
   width: 260px; }
 
 .filter {
-  float: left;
-  display: flex;
-  flex-wrap: wrap;
   width: 200px;
   padding-right: 70px;
   margin-right: 70px;
@@ -735,7 +732,7 @@ ul {
 
 .filter__title {
   margin-top: 20px;
-  margin-bottom: 75px;
+  margin-bottom: 88px;
   padding-left: 3px;
   font-family: "Gilroy", "Arial", sans-serif;
   font-size: 16px;
@@ -752,14 +749,14 @@ ul {
   padding: 0;
   margin: 0;
   margin-top: 14px;
-  margin-bottom: 17px;
+  margin-bottom: 32px;
   border: none;
   box-sizing: border-box; }
   .filter__item--price {
     display: flex; }
   .filter__item--checkbox {
     padding-top: 10px;
-    margin-bottom: 22px; }
+    margin-bottom: 35px; }
   .filter__item--radio {
     padding-top: 10px;
     margin-bottom: 44px; }
@@ -898,6 +895,7 @@ ul {
     border-radius: 50%; }
 
 .filter__btn {
+  width: 200px;
   border: none;
   outline: none; }
   .filter__btn:active {
@@ -1170,7 +1168,7 @@ ul {
   background-color: #ffffff;
   box-shadow: 0px 8px 28px -5px rgba(0, 0, 0, 0.75);
   animation-name: form-visible;
-  animation-duration: 1.5s;
+  animation-duration: 0.5s;
   animation-timing-function: ease-out; }
   .popup-form--active {
     display: block; }
@@ -1246,12 +1244,12 @@ ul {
 @keyframes form-visible {
   0% {
     left: 50%;
-    top: 2200px;
+    bottom: 286px;
     transform: scale(0) translateX(-50%);
     opacity: 0.5; }
   100% {
     left: 50%;
-    top: 1100px;
+    bottom: 386px;
     transform: scale(1) translateX(-50%);
     opacity: 1; } }
 
@@ -1286,7 +1284,6 @@ ul {
     opacity: 1; } }
 
 .products {
-  float: right;
   width: 760px; }
 
 .products__wrapper {
@@ -1744,10 +1741,11 @@ ul {
     fill: #ffc600; }
 
 .user-panel__connect {
-  display: none;
-  margin-right: -12px; }
+  display: none; }
   .user-panel__connect--active {
     display: block; }
+  .user-panel__connect--login {
+    margin-right: 20px; }
 
 .user-panel__output-btn {
   transform: translateX(-50px);

@@ -17,10 +17,6 @@ function popupMapOpen() {
 function popupMapClose() {
   popupMap.classList.remove('popup-map--active');
 }
-
-btnClosePopupMap.addEventListener('click', popupMapClose);
-btnOpenPopupMap.addEventListener('click', popupMapOpen);
-
 function popupFormOpen() {
   event.preventDefault();
   popupForm.classList.add('popup-form--active');
@@ -28,11 +24,7 @@ function popupFormOpen() {
 function popupFormClose() {
   popupForm.classList.remove('popup-form--active');
 }
-
-btnClosePopupForm.addEventListener('click', popupFormClose);
-btnOpenPopupForm.addEventListener('click', popupFormOpen);
-
-window.addEventListener('keydown', function(event) {
+function keydownEsc() {
   if(event.keyCode === ENTER_KEY_CODE) {
     if(popupMap.classList.contains('popup-map--active')) {
       popupMap.classList.remove('popup-map--active');
@@ -41,4 +33,10 @@ window.addEventListener('keydown', function(event) {
       popupForm.classList.remove('popup-form--active');
     }
   }
-});
+}
+
+btnClosePopupMap.addEventListener('click', popupMapClose);
+btnOpenPopupMap.addEventListener('click', popupMapOpen);
+btnClosePopupForm.addEventListener('click', popupFormClose);
+btnOpenPopupForm.addEventListener('click', popupFormOpen);
+window.addEventListener('keydown', keydownEsc);
