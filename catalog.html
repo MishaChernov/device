@@ -103,10 +103,12 @@
 
     <div class="user-panel  page-header__user-panel">
       <form class="search  user-panel__search" action="/" method="get">
-        <svg class="search__icon" width="16" height="16">
-          <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-search"></use>
-        </svg>
-        <input class="search__input" type="text" name="search" placeholder="Поиск по сайту">
+        <label class="search__label" for="search-icon">
+          <svg class="search__icon" width="16" height="16">
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-search"></use>
+          </svg>
+        </label>
+        <input class="search__input" id="search-icon" type="text" name="search" placeholder="Поиск по сайту">
         <button class="search__btn" type="submit" name="Найти">Найти</button>
       </form>
 
@@ -117,7 +119,7 @@
         Войти
       </a>
       <div class="user-panel__connect  user-panel__connect--active">
-        <a class="user-panel__link  user-panel__link--login" href="#">
+        <a class="user-panel__link  user-panel__link--login  user-panel__link--login-active" href="#">
           <svg class="user-panel__icon" width="13" height="12">
             <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-user"></use>
           </svg>

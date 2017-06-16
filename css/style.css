@@ -1355,6 +1355,7 @@ ul {
 
 .products__btn {
   margin: 0 auto;
+  text-decoration: none;
   border: none;
   outline: none; }
   .products__btn--compare {
@@ -1372,6 +1373,12 @@ ul {
 .products__pagination {
   margin-top: -12px;
   margin-bottom: 71px; }
+
+.search:hover {
+  opacity: 0.6; }
+
+.search:active {
+  opacity: 0.3; }
 
 .search__icon {
   position: absolute;
@@ -1627,7 +1634,6 @@ ul {
   fill: #ffffff; }
 
 .sort {
-  z-index: 3;
   display: flex;
   flex-basis: 760px;
   margin-bottom: 75px; }
@@ -1644,6 +1650,7 @@ ul {
 
 .sort__list {
   position: relative;
+  z-index: 3;
   margin-left: 50px;
   margin-top: 18px;
   list-style: none; }
@@ -1723,6 +1730,8 @@ ul {
     opacity: 0.3; }
   .user-panel__link--login {
     margin-right: 19%; }
+  .user-panel__link--login-active {
+    margin-right: 0; }
   .user-panel__link:last-child {
     margin-right: 7px; }
   .user-panel__link--hidden {
@@ -1741,14 +1750,12 @@ ul {
     fill: #ffc600; }
 
 .user-panel__connect {
-  display: none; }
+  display: none;
+  margin-right: 44px; }
   .user-panel__connect--active {
     display: block; }
-  .user-panel__connect--login {
-    margin-right: 20px; }
 
 .user-panel__output-btn {
-  transform: translateX(-50px);
   background: none;
   outline: none;
   border: none;

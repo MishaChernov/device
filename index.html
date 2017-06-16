@@ -102,10 +102,12 @@
 
     <div class="user-panel  page-header__user-panel">
       <form class="search  user-panel__search" action="/" method="get">
-        <svg class="search__icon" width="16" height="16">
-          <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-search"></use>
-        </svg>
-        <input class="search__input" type="text" name="search" placeholder="Поиск по сайту">
+        <label class="search__label" for="search-icon">
+          <svg class="search__icon" width="16" height="16">
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-search"></use>
+          </svg>
+        </label>
+        <input class="search__input" id="search-icon" type="text" name="search" placeholder="Поиск по сайту">
         <button class="search__btn" type="submit" name="Найти">Найти</button>
       </form>
 
@@ -258,7 +260,7 @@
         </div>
       </div>
 
-      <div class="popular  page-main__popular">
+      <section class="popular  page-main__popular">
         <a class="popular__link  popular__link--virtual" href="#">
           <h3 class="popular__title">Виртуальная реальность</h3>
         </a>
@@ -277,7 +279,7 @@
         <a class="popular__link  popular__link--drone" href="#">
           <h3 class="popular__title">Квадрокоптеры</h3>
         </a>
-      </div>
+      </section>
     </div>
 
     <section class="services  page-main__services">
@@ -315,12 +317,12 @@
     </section>
 
     <div class="container">
-      <div class="brends  page-main__brends">
+      <section class="brends  page-main__brends">
         <a class="brends__link  brends__link--dji" href="#">DJI</a>
         <a class="brends__link  brends__link--gadjets" href="#">Sp Gadjets</a>
         <a class="brends__link  brends__link--gopro" href="#">GoPro</a>
         <a class="brends__link  brends__link--vive" href="#">Vive</a>
-      </div>
+      </section>
 
       <section class="about  page-main__about">
         <h2 class="about__title">О нас</h2>
