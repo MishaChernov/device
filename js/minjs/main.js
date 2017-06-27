@@ -2,12 +2,10 @@
 
 var popupMap = document.querySelector('.popup-map');
 var popupForm = document.querySelector('.popup-form');
-
 var btnClosePopupMap = popupMap.querySelector('.btn-close');
 var btnClosePopupForm = popupForm.querySelector('.btn-close');
 var btnOpenPopupMap = document.querySelector('.contacts__map');
 var btnOpenPopupForm = document.querySelector('.contacts__btn');
-
 var ENTER_KEY_CODE = 27;
 
 function popupMapOpen() {
