@@ -14,29 +14,25 @@ function popupMapOpen() {
   event.preventDefault();
   popupMap.classList.add('popup-map--active');
 }
-function popupMapClose() {
-  popupMap.classList.remove('popup-map--active');
-}
+
 function popupFormOpen() {
   event.preventDefault();
   popupForm.classList.add('popup-form--active');
 }
-function popupFormClose() {
-  popupForm.classList.remove('popup-form--active');
-}
-function keydownEsc() {
-  if(event.keyCode === ENTER_KEY_CODE) {
-    if(popupMap.classList.contains('popup-map--active')) {
-      popupMap.classList.remove('popup-map--active');
-    }
-    if(popupForm.classList.contains('popup-form--active')) {
-      popupForm.classList.remove('popup-form--active');
-    }
-  }
+
+function popupClose() {
+	popupForm.classList.remove('popup-form--active');
+	popupMap.classList.remove('popup-map--active');
 }
 
-btnClosePopupMap.addEventListener('click', popupMapClose);
+function keydownEsc() {
+  if(event.keyCode === ENTER_KEY_CODE) {
+    popupClose();
+	}
+}
+
+btnClosePopupMap.addEventListener('click', popupClose);
 btnOpenPopupMap.addEventListener('click', popupMapOpen);
-btnClosePopupForm.addEventListener('click', popupFormClose);
+btnClosePopupForm.addEventListener('click', popupClose);
 btnOpenPopupForm.addEventListener('click', popupFormOpen);
 window.addEventListener('keydown', keydownEsc);
